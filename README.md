@@ -2,7 +2,7 @@
 
 Sitio web oficial de Nébula Visión Studio - Productora audiovisual chilena especializada en videoclips musicales y contenido cinematográfico.
 
-![Nébula Visión Studio](public/images/logo/logo.png)
+![Nébula Visión Studio](public/nebulaweb/images/logo/logo.png)
 
 ## 🌐 Demo en vivo
 

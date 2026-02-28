@@ -39,7 +39,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
         <img
-          src="/images/projects/Sin título_1.1.20.jpg"
+          src="/nebulaweb/images/projects/Sin título_1.1.20.jpg"
           alt="Background"
           className="w-full h-full object-cover opacity-40"
         />
@@ -50,7 +50,7 @@ const Hero = () => {
         {/* Logo Animation */}
         <div className="reveal mb-8">
           <img
-            src="/images/logo/logo.png"
+            src="/nebulaweb/images/logo/logo.png"
             alt="Nébula Visión Studio"
             className="h-24 md:h-32 w-auto mx-auto animate-pulse"
             style={{ animationDuration: '3s' }}

@@ -32,37 +32,37 @@ const Team = () => {
     {
       name: 'Valentina Rojas',
       role: 'Directora Creativa',
-      image: '/images/team/DSC00820.jpg.jpeg',
+      image: '/nebulaweb/images/team/DSC00820.jpg.jpeg',
     },
     {
       name: 'Diego Herrera',
       role: 'Director de Fotografía',
-      image: '/images/team/DSC00906.jpg.jpeg',
+      image: '/nebulaweb/images/team/DSC00906.jpg.jpeg',
     },
     {
       name: 'Martín Castro',
       role: 'Productor Ejecutivo',
-      image: '/images/team/DSC00927.jpg.jpeg',
+      image: '/nebulaweb/images/team/DSC00927.jpg.jpeg',
     },
     {
       name: 'Camila Soto',
       role: 'Editora de Video',
-      image: '/images/team/DSC00935.jpg.jpeg',
+      image: '/nebulaweb/images/team/DSC00935.jpg.jpeg',
     },
     {
       name: 'Nicolás Vega',
       role: 'Director de Arte',
-      image: '/images/team/DSC00667.jpg.jpeg',
+      image: '/nebulaweb/images/team/DSC00667.jpg.jpeg',
     },
     {
       name: 'Sebastián Morales',
       role: 'Sonidista',
-      image: '/images/team/DSC00728.jpg.jpeg',
+      image: '/nebulaweb/images/team/DSC00728.jpg.jpeg',
     },
     {
       name: 'Joaquín Pérez',
       role: 'Colorista',
-      image: '/images/team/DSC00879.jpg.jpeg',
+      image: '/nebulaweb/images/team/DSC00879.jpg.jpeg',
     },
   ];
 

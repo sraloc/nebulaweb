@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <a href="#inicio" className="flex items-center gap-3 mb-5">
               <img
-                src="/images/logo/logo.png"
+                src="/nebulaweb/images/logo/logo.png"
                 alt="Nébula Visión Studio"
                 className="h-12 w-auto"
               />
