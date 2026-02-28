@@ -47,7 +47,7 @@ const Navigation = () => {
             className="flex items-center gap-3"
           >
             <img
-              src="/nebulaweb/images/logo/logo.png"
+              src="./images/logo/logo.png"
               alt="Nébula Visión Studio"
               className="h-10 w-auto"
             />
