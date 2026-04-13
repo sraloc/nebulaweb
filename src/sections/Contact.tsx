@@ -55,14 +55,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contacto@nebulavision.cl',
-      href: 'mailto:contacto@nebulavision.cl',
+      value: 'Productora@vortexcine.com',
+      href: 'mailto:Productora@vortexcine.com',
     },
     {
       icon: Phone,
       label: 'Teléfono',
-      value: '+56 9 1234 5678',
-      href: 'tel:+56912345678',
+      value: '+56 9 9968 5075',
+      href: 'tel:+56999685075',
     },
     {
       icon: MapPin,
@@ -90,13 +90,13 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="reveal">
-            <span className="text-[#D946EF] text-sm font-semibold tracking-widest uppercase">
+            <span className="text-[#A855F7] text-sm font-semibold tracking-widest uppercase">
               Contacto
             </span>
           </div>
 
           <h2 className="reveal stagger-1 text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-6">
-            Hagamos <span className="nebula-text">magia</span> juntos
+            Hagamos <span className="vortex-text">magia</span> juntos
           </h2>
 
           <p className="reveal stagger-2 text-gray-400 max-w-2xl mx-auto">
@@ -115,12 +115,12 @@ const Contact = () => {
                   href={item.href}
                   className="flex items-start gap-4 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#D946EF]/20 to-[#F0ABFC]/20 flex items-center justify-center flex-shrink-0 group-hover:from-[#D946EF]/30 group-hover:to-[#F0ABFC]/30 transition-all">
-                    <item.icon className="text-[#D946EF]" size={20} />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#A855F7]/20 to-[#C084FC]/20 flex items-center justify-center flex-shrink-0 group-hover:from-[#A855F7]/30 group-hover:to-[#C084FC]/30 transition-all">
+                    <item.icon className="text-[#A855F7]" size={20} />
                   </div>
                   <div>
                     <p className="text-gray-500 text-sm mb-1">{item.label}</p>
-                    <p className="text-white font-medium group-hover:text-[#D946EF] transition-colors">
+                    <p className="text-white font-medium group-hover:text-[#A855F7] transition-colors">
                       {item.value}
                     </p>
                   </div>
@@ -136,7 +136,7 @@ const Contact = () => {
                   <a
                     key={social.label}
                     href={social.href}
-                    className="w-11 h-11 rounded-xl bg-white/5 hover:bg-[#D946EF] border border-white/10 hover:border-[#D946EF] flex items-center justify-center transition-all"
+                    className="w-11 h-11 rounded-xl bg-white/5 hover:bg-[#A855F7] border border-white/10 hover:border-[#A855F7] flex items-center justify-center transition-all"
                     aria-label={social.label}
                   >
                     <social.icon size={18} />
@@ -196,7 +196,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D946EF] focus:ring-1 focus:ring-[#D946EF] transition-all"
+                        className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#A855F7] focus:ring-1 focus:ring-[#A855F7] transition-all"
                         placeholder="Tu nombre"
                       />
                     </div>
@@ -210,7 +210,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D946EF] focus:ring-1 focus:ring-[#D946EF] transition-all"
+                        className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#A855F7] focus:ring-1 focus:ring-[#A855F7] transition-all"
                         placeholder="tu@email.com"
                       />
                     </div>
@@ -225,22 +225,22 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D946EF] focus:ring-1 focus:ring-[#D946EF] transition-all appearance-none cursor-pointer"
+                      className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#A855F7] focus:ring-1 focus:ring-[#A855F7] transition-all appearance-none cursor-pointer"
                     >
                       <option value="" className="bg-black">
                         Selecciona una opción
                       </option>
-                      <option value="videoclip" className="bg-black">
-                        Videoclip Musical
-                      </option>
-                      <option value="cortometraje" className="bg-black">
-                        Cortometraje
-                      </option>
-                      <option value="publicidad" className="bg-black">
-                        Spot Publicitario
+                      <option value="stills" className="bg-black">
+                        Stills Cinematográficos
                       </option>
                       <option value="fotografia" className="bg-black">
                         Sesión Fotográfica
+                      </option>
+                      <option value="videoclip" className="bg-black">
+                        Videoclip Musical
+                      </option>
+                      <option value="makeoff" className="bg-black">
+                        Make Off / Behind the Scenes
                       </option>
                       <option value="otro" className="bg-black">
                         Otro
@@ -258,7 +258,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#D946EF] focus:ring-1 focus:ring-[#D946EF] transition-all resize-none"
+                      className="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#A855F7] focus:ring-1 focus:ring-[#A855F7] transition-all resize-none"
                       placeholder="Cuéntanos sobre tu proyecto..."
                     />
                   </div>
@@ -266,7 +266,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-nebula w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="btn-vortex w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>

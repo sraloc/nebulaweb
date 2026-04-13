@@ -10,10 +10,10 @@ function App() {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
       {/* Animated Background Orbs */}
-      <div className="nebula-bg">
-        <div className="nebula-orb nebula-orb-1" />
-        <div className="nebula-orb nebula-orb-2" />
-        <div className="nebula-orb nebula-orb-3" />
+      <div className="vortex-bg">
+        <div className="vortex-orb vortex-orb-1" />
+        <div className="vortex-orb vortex-orb-2" />
+        <div className="vortex-orb vortex-orb-3" />
       </div>
 
       {/* Film Grain Overlay */}

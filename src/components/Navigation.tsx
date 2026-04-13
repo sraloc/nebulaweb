@@ -47,12 +47,12 @@ const Navigation = () => {
             className="flex items-center gap-3"
           >
             <img
-              src="./images/logo/logo.png"
-              alt="Nébula Visión Studio"
+              src="/images/logo/logo.png"
+              alt="Vortex Studio"
               className="h-10 w-auto"
             />
             <span className="hidden sm:block text-white font-semibold text-lg tracking-wide">
-              NÉBULA
+              VORTEX
             </span>
           </a>
 
@@ -69,7 +69,7 @@ const Navigation = () => {
                 className="text-gray-300 hover:text-white transition-colors text-sm font-medium tracking-wide relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#D946EF] to-[#F0ABFC] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#A855F7] to-[#C084FC] transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>

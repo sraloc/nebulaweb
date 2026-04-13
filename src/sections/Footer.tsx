@@ -16,10 +16,10 @@ const Footer = () => {
       { label: 'Contacto', href: '#contacto' },
     ],
     servicios: [
-      { label: 'Videoclips', href: '#' },
-      { label: 'Cortometrajes', href: '#' },
+      { label: 'Stills', href: '#' },
       { label: 'Fotografía', href: '#' },
-      { label: 'Producción', href: '#' },
+      { label: 'Make Off', href: '#' },
+      { label: 'Videoclips', href: '#' },
     ],
     legal: [
       { label: 'Política de Privacidad', href: '#' },
@@ -45,40 +45,40 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <a href="#inicio" className="flex items-center gap-3 mb-5">
               <img
-                src="./images/logo/logo.png"
-                alt="Nébula Visión Studio"
+                src="/images/logo/logo.png"
+                alt="Vortex Studio"
                 className="h-12 w-auto"
               />
             </a>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Productora audiovisual chilena especializada en videoclips
-              musicales y contenido cinematográfico de alto impacto.
+              musicales, fotografía y contenido cinematográfico de alto impacto.
             </p>
             <div className="flex gap-3">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D946EF] flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#A855F7] flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={16} />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D946EF] flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#A855F7] flex items-center justify-center transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube size={16} />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D946EF] flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#A855F7] flex items-center justify-center transition-colors"
                 aria-label="Vimeo"
               >
                 <Film size={16} />
               </a>
               <a
-                href="mailto:contacto@nebulavision.cl"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D946EF] flex items-center justify-center transition-colors"
+                href="mailto:Productora@vortexcine.com"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#A855F7] flex items-center justify-center transition-colors"
                 aria-label="Email"
               >
                 <Mail size={16} />
@@ -98,7 +98,7 @@ const Footer = () => {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-gray-400 hover:text-[#D946EF] transition-colors text-sm"
+                    className="text-gray-400 hover:text-[#A855F7] transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -115,7 +115,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-[#D946EF] transition-colors text-sm"
+                    className="text-gray-400 hover:text-[#A855F7] transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -134,11 +134,11 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Tu email"
-                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#D946EF] transition-colors"
+                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#A855F7] transition-colors"
               />
               <button
                 type="submit"
-                className="bg-[#D946EF] hover:bg-[#C026D3] text-white px-4 py-2.5 rounded-lg transition-colors"
+                className="bg-[#A855F7] hover:bg-[#7C3AED] text-white px-4 py-2.5 rounded-lg transition-colors"
               >
                 <Mail size={16} />
               </button>
@@ -152,14 +152,14 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-sm text-center sm:text-left">
-              {currentYear} Nébula Visión Studio. Todos los derechos reservados.
+              {currentYear} Vortex Studio. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-6">
               {footerLinks.legal.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-gray-500 hover:text-[#D946EF] transition-colors text-sm"
+                  className="text-gray-500 hover:text-[#A855F7] transition-colors text-sm"
                 >
                   {link.label}
                 </a>
@@ -172,7 +172,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#D946EF] hover:bg-[#C026D3] text-white flex items-center justify-center shadow-lg shadow-[#D946EF]/30 transition-all hover:scale-110 z-50"
+        className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#A855F7] hover:bg-[#7C3AED] text-white flex items-center justify-center shadow-lg shadow-[#A855F7]/30 transition-all hover:scale-110 z-50"
         aria-label="Volver arriba"
       >
         <ArrowUp size={20} />

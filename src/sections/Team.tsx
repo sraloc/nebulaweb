@@ -7,6 +7,25 @@ interface TeamMember {
   image: string;
 }
 
+// Función para extraer nombre y cargo del nombre de archivo
+const parseTeamMember = (filename: string): { name: string; role: string } => {
+  // Remover extensión
+  const namePart = filename.replace(/\.[^/.]+$/, '');
+  // Separar por " - "
+  const parts = namePart.split(' - ');
+  
+  if (parts.length >= 2) {
+    const name = parts[0].trim();
+    // El resto son los cargos, unidos por " / " o " _ "
+    let role = parts.slice(1).join(' - ');
+    // Reemplazar " _ " por " / " para separar cargos múltiples
+    role = role.replace(/\s*_\s*/g, ' / ');
+    return { name, role };
+  }
+  
+  return { name: namePart, role: 'Equipo Vortex' };
+};
+
 const Team = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -28,43 +47,29 @@ const Team = () => {
     return () => observer.disconnect();
   }, []);
 
-  const team: TeamMember[] = [
-    {
-      name: 'Valentina Rojas',
-      role: 'Directora Creativa',
-      image: '/nebulaweb/images/team/DSC00820.jpg.jpeg',
-    },
-    {
-      name: 'Diego Herrera',
-      role: 'Director de Fotografía',
-      image: '/nebulaweb/images/team/DSC00906.jpg.jpeg',
-    },
-    {
-      name: 'Martín Castro',
-      role: 'Productor Ejecutivo',
-      image: '/nebulaweb/images/team/DSC00927.jpg.jpeg',
-    },
-    {
-      name: 'Camila Soto',
-      role: 'Editora de Video',
-      image: '/nebulaweb/images/team/DSC00935.jpg.jpeg',
-    },
-    {
-      name: 'Nicolás Vega',
-      role: 'Director de Arte',
-      image: '/nebulaweb/images/team/DSC00667.jpg.jpeg',
-    },
-    {
-      name: 'Sebastián Morales',
-      role: 'Sonidista',
-      image: '/nebulaweb/images/team/DSC00728.jpg.jpeg',
-    },
-    {
-      name: 'Joaquín Pérez',
-      role: 'Colorista',
-      image: '/nebulaweb/images/team/DSC00879.jpg.jpeg',
-    },
+  // Lista de archivos del equipo
+  const teamFiles = [
+    'Ariel Aguilera - Director de Fotografía _ Operador de Cámara .jpeg',
+    'Carlos Cruces - Productor Comercial.jpeg',
+    'Cesar Abarca - Founder _ Productor ejecutivo _ Director.jpeg',
+    'Crhistian Bustamante - Sonido directo _ Asistente de Dirección dirección.JPG',
+    'Elizabeth Cuevas - Asistente de Producción _ Styling.jpeg',
+    'Francisca Venegas - Directora Creativa _ Guionista.jpg',
+    'Joaquín Campos - Director de Fotografía _ Postproductor.jpeg',
+    'Luis Tobar - Operador de Cámara.jpeg',
+    'Nichole Sepúlveda - Postproductora.jpg',
+    'Santiago Salazar - Productor General.jpg',
+    'Vicente Cortés - Director de Arte _ Asistente de Producción .JPG',
   ];
+
+  const team: TeamMember[] = teamFiles.map((file) => {
+    const { name, role } = parseTeamMember(file);
+    return {
+      name,
+      role,
+      image: `/images/team/${file}`,
+    };
+  });
 
   return (
     <section
@@ -78,18 +83,18 @@ const Team = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="reveal">
-            <span className="text-[#D946EF] text-sm font-semibold tracking-widest uppercase">
+            <span className="text-[#A855F7] text-sm font-semibold tracking-widest uppercase">
               Nuestro Equipo
             </span>
           </div>
 
           <h2 className="reveal stagger-1 text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-6">
-            Los <span className="nebula-text">creativos</span> detrás de cada
+            Los <span className="vortex-text">creativos</span> detrás de cada
             proyecto
           </h2>
 
           <p className="reveal stagger-2 text-gray-400 max-w-2xl mx-auto">
-            Un equipo multidisciplinario de profesionales apasionados por el
+            Un equipo multidisciplinario de 11 profesionales apasionados por el
             cine, la música y el arte visual. Juntos, convertimos ideas en
             realidad.
           </p>
@@ -120,7 +125,7 @@ const Team = () => {
                   <h3 className="text-white font-bold text-lg mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-[#D946EF] text-sm font-medium mb-3">
+                  <p className="text-[#A855F7] text-sm font-medium mb-3">
                     {member.role}
                   </p>
 
@@ -128,21 +133,21 @@ const Team = () => {
                   <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <a
                       href="#"
-                      className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D946EF] flex items-center justify-center transition-colors"
+                      className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#A855F7] flex items-center justify-center transition-colors"
                       aria-label={`Instagram de ${member.name}`}
                     >
                       <Instagram size={14} />
                     </a>
                     <a
                       href="#"
-                      className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D946EF] flex items-center justify-center transition-colors"
+                      className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#A855F7] flex items-center justify-center transition-colors"
                       aria-label={`LinkedIn de ${member.name}`}
                     >
                       <Linkedin size={14} />
                     </a>
                     <a
                       href="#"
-                      className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D946EF] flex items-center justify-center transition-colors"
+                      className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#A855F7] flex items-center justify-center transition-colors"
                       aria-label={`Email de ${member.name}`}
                     >
                       <Mail size={14} />
@@ -152,20 +157,6 @@ const Team = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Join Team CTA */}
-        <div className="reveal stagger-5 mt-16 text-center">
-          <div className="bg-gradient-to-r from-[#D946EF]/10 to-[#F0ABFC]/10 rounded-2xl p-8 border border-[#D946EF]/20">
-            <h3 className="text-white text-xl font-bold mb-3">
-              ¿Quieres ser parte del equipo?
-            </h3>
-            <p className="text-gray-400 mb-6 max-w-lg mx-auto">
-              Siempre estamos buscando talento creativo para sumar a nuestra
-              familia. Envíanos tu portfolio y cuéntanos sobre ti.
-            </p>
-            <button className="btn-nebula">Únete al Equipo</button>
-          </div>
         </div>
       </div>
     </section>
